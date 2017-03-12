@@ -1,0 +1,402 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>零基础HTML及CSS编码（一）</title>
+  <style lang="css">
+    body {
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+      background-color: #f8f8f8;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    .nav {
+      background-color: #434343;
+      padding: 20px 10px;
+    }
+    
+    .logo {
+      float: left;
+      color: #fff;
+    }
+    
+    nav {
+      float: right;
+    }
+    
+    nav ul {
+      padding: 0;
+      margin: 0;
+    }
+    
+    nav li {
+      float: left;
+      margin-right: 30px;
+    }
+    
+    nav a {
+      color: #fff;
+      font-size: 12px;
+      text-decoration: none;
+    }
+    
+    a.disabled {
+      color: #ccc;
+      cursor: default;
+    }
+    
+    .clear {
+      clear: both;
+    }
+    
+    .container {
+      width: 98%;
+      margin: 0 auto;
+      margin-top: 20px;
+      background-color: #fff;
+      box-shadow: 3px 3px 10px 2px #ccc;
+      padding: 20px;
+      margin-bottom: 10px;
+    }
+    
+    .container h3 {
+      color: grey;
+    }
+    
+    .container .desc {
+      color: grey;
+      font-size: 12px;
+    }
+    
+    .container section {
+      text-indent: 30px;
+      line-height: 25px;
+      word-break: break-all;
+      word-wrap: break-word;
+    }
+    
+    .list {
+      padding-left: 0;
+      list-style: none;
+    }
+    
+    .img-list {
+      list-style: none;
+    }
+    
+    .img-list li {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ccc;
+      width: 200px;
+      margin-bottom: 20px;
+    }
+    
+    .img-list li span {
+      display: block;
+      text-align: center;
+    }
+    
+    table thead tr {
+      background-color: black;
+      color: #fff;
+    }
+    
+    table {
+      border: 1px solid #ccc;
+      width: 100%;
+      text-align: left;
+      border-right: 0;
+      border-bottom: 0;
+      margin-bottom: 20px;
+      line-height: 25px;
+    }
+    
+    table tfoot tr {
+      background-color: grey;
+    }
+    
+    caption {
+      text-align: left;
+    }
+    
+    table td,
+    table th {
+      border-right: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      padding-left: 10px;
+    }
+    
+    .container .title {
+      border-left: 3px solid grey;
+      color: black;
+      padding: 5px 10px;
+    }
+    
+    .row {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    
+    .row::after {
+      content: '';
+      clear: both;
+      display: block;
+    }
+    
+    .col {
+      width: 30%;
+      text-align: right;
+      float: left;
+    }
+    
+    .col+.col {
+      width: 70%;
+      text-align: left;
+      padding-left: 10px;
+    }
+    
+    .col label {
+      display: block;
+      color: #ccc;
+      line-height: 35px;
+    }
+    
+    .btn {
+      background-color: dodgerblue;
+      color: #fff;
+      border-radius: 5px;
+      display: block;
+      border: 0;
+      width: 100%;
+      height: 40px;
+      font-size: 16px;
+    }
+    
+    footer {
+      background: black;
+      color: #fff;
+      text-align: center;
+      height: 80px;
+      line-height: 80px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <!--顶部导航条-->
+  <div class="nav">
+    <div class="logo">LOGO</div>
+    <nav>
+      <ul>
+        <li><a href="#">导航条1</a></li>
+        <li><a href="#">导航条2</a></li>
+        <li><a href="#">导航条3</a></li>
+        <li><a href="javascript:void(0)" class="disabled">导航条4</a></li>
+      </ul>
+    </nav>
+    <div class="clear"></div>
+  </div>
+
+  <div class="container">
+    <article>
+      <h1>文章一级标题</h1>
+      <h3>文章二级标题</h3>
+      <p class="desc">文章作者 文章发表时间</p>
+
+      <section>
+        这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这里换了行<br/> 这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事,
+        在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事,在很久很久以前.....这是一个很长很长的故事, 在很久很久以前..... <a href="#">这里出现了一个链接</a>这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事,
+        在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....
+      </section>
+      <img src="../image/000006.jpg" alt="" width="300px">
+      <section>
+        这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这里换了行<br/> 这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事,
+        在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事,在很久很久以前.....这是一个很长很长的故事, 在很久很久以前..... <a href="#">这里出现了一个链接</a>这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事,
+        在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....
+      </section>
+    </article>
+  </div>
+
+  <div class="container">
+    <article>
+      <h1>另一篇文章一级标题</h1>
+      <h3>文章二级标题</h3>
+      <p class="desc">文章作者 文章发表时间</p>
+
+      <section>
+        这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这里换了行<br/> 这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事,
+        在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事,在很久很久以前.....这是一个很长很长的故事, 在很久很久以前..... <a href="#">这里出现了一个链接</a>这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事,
+        在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....这是一个很长很长的故事, 在很久很久以前.....
+      </section>
+      <img src="../image/000006.jpg" alt="" width="300px">
+      <section>
+        <ul class="list">
+          <li>列表项目1</li>
+          <li>列表项目2</li>
+          <li>列表项目3</li>
+        </ul>
+      </section>
+    </article>
+  </div>
+
+  <div class="container">
+    <h1>图片</h1>
+
+    <ul class="img-list">
+      <li>
+        <span>好看的图片</span>
+        <img src="../image/000006.jpg" alt="" width="180px">
+      </li>
+      <li>
+        <span>好看的图片</span>
+        <img src="../image/000006.jpg" alt="" width="180px">
+      </li>
+      <li>
+        <span>好看的图片</span>
+        <img src="../image/000006.jpg" alt="" width="180px">
+      </li>
+      <li>
+        <span>好看的图片</span>
+        <img src="../image/000006.jpg" alt="" width="180px">
+      </li>
+      <li>
+        <span>好看的图片</span>
+        <img src="../image/000006.jpg" alt="" width="180px">
+      </li>
+      <li>
+        <span>好看的图片</span>
+        <img src="../image/000006.jpg" alt="" width="180px">
+      </li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <h1>最后一篇文章一级标题</h1>
+    <h3>文章二级标题</h3>
+    <p class="desc">文章作者 文章发表时间</p>
+
+    <ol>
+      <li>排名1</li>
+      <li>排名2</li>
+      <li>排名3</li>
+    </ol>
+
+    <table cellspacing="0" cellpadding="0">
+      <caption>下面是一个表格, 给表格增加了一个 'border=1' 好让你看出是一个表格</caption>
+      <thead>
+        <tr>
+          <th>表头</th>
+          <th>表头</th>
+          <th>表头</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>表内容单元格</td>
+          <td>表内容单元格</td>
+          <td><a href="">操作</a></td>
+        </tr>
+        <tr>
+          <td>表内容单元格</td>
+          <td>表内容单元格</td>
+          <td><a href="">操作</a></td>
+        </tr>
+        <tr>
+          <td>表内容单元格</td>
+          <td>表内容单元格</td>
+          <td><a href="">操作</a></td>
+        </tr>
+        <tr>
+          <td>表内容单元格</td>
+          <td>表内容单元格</td>
+          <td><a href="">操作</a></td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>总计</td>
+          <td colspan="2">10000</td>
+        </tr>
+      </tfoot>
+
+    </table>
+  </div>
+
+  <div class="container">
+    <h3 class="title">这里以后是一个侧栏,这是侧栏的标题</h3>
+    <blockquote>
+      <form action="">
+        <div class="row">
+          <div class="col">请输入邮箱地址: </div>
+          <div class="col">
+            <input type="text" />
+            <label for="">邮箱地址请按照要求输入</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">请输入密码: </div>
+          <div class="col">
+            <input type="password" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">请重复输入密码: </div>
+          <div class="col">
+            <input type="password" />
+            <label for="">密码为6-16位英文数字</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">性别: </div>
+          <div class="col">
+            <input type="radio" name="sex" />男
+            <input type="radio" name="sex" />女
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">城市: </div>
+          <div class="col">
+            <setion>
+              <option value="">城市</option>
+            </setion>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">爱好: </div>
+          <div class="col">
+            <input type="checkbox">运动</input>
+            <input type="checkbox">艺术</input>
+            <input type="checkbox">科学</input>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">个人描述: </div>
+          <div class="col">
+            <textarea name="" id="" cols="30" rows="10">个人描述</textarea>
+          </div>
+        </div>
+        <div class="row">
+          <button type="button" class="btn">确认提交</button>
+        </div>
+      </form>
+    </blockquote>
+  </div>
+
+  <footer>版权所有©️</footer>
+</body>
+
+</html>
