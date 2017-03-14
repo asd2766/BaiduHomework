@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>定位和居中问题</title>
+  <style lang="css">
+    body {
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+      background-color: #f8f8f8;
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    .container {
+      width: 400px;
+      height: 200px;
+      background: #ccc;
+      position: relative;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+    
+    .left-corn,
+    .right-corn {
+      position: absolute;
+      background-color: #fc0;
+      width: 100px;
+      height: 100px;
+      border-radius: 50px;
+    }
+    
+    .left-corn {
+      top: -50px;
+      left: -50px;
+    }
+    
+    .right-corn {
+      right: -50px;
+      bottom: -50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="left-corn"></div>
+    <div class="right-corn"></div>
+  </div>
+
+
+</body>
+
+</html>
