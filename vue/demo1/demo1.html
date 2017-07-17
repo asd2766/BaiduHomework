@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>vue双向绑定学习</title>
+  </head>
+  <body>
+    <div class="">
+      vue 双向绑定学习<br/>
+      <a href="https://github.com/youngwind/blog/issues/84">参考文章链接</a>
+    </div>
+    <script type="text/javascript">
+      // 构建观察者函数
+      function Observer(data) {
+        this.data = data;
+        this.walk(data);
+      }
+
+      let p = Observer.prototype;
+
+      // 采用递归的方法,获取最底层的属性位置
+      // 我们需要为对象的每个参数都绑定getter, setter方法
+      p.walk = function(obj) {
+        let val;
+        for (var key in obj) {
+          // 为什么要加上 hasOwnProperty 这个判断?
+          // 因为  for...in 循环会把对象原型链上的所有可枚举的类型都循环出来
+          // 而我们想要的仅仅是这个对象本身拥有的属性,所以要加这个判断进行过滤
+          if (obj.hasOwnProperty(key)) {
+            val = obj[key];
+            // 如果这个对象还是个参数, 说明还没到最底层, 继续 new Observer 进行遍历
+            if (typeof val === 'object') {
+              new Observer(val);
+            }
+
+            this.convert(key, val);
+          }
+        }
+      };
+
+      p.convert = function(key, val) {
+        // Object.defineProperty ES5新增的语法, 通过这个方法可以自定义getter, setter方法
+        Object.defineProperty(this.data, key, {
+          enumerable: true,
+          configurable: true,
+          get: function() {
+            console.log('你访问了' + key);
+            return val;
+          },
+          set: function(newVal) {
+            console.log('你设置了' + key);
+            console.log('新的' + key + ' = ' + newVal);
+            if (newVal === val) {
+              return;
+            }
+            val = newVal;
+          }
+        })
+      };
+
+      let data = {
+        user: {
+          name: 'test1',
+          age: 24
+        },
+        address: {
+          city: 'wenzhou'
+        }
+      }
+
+      let app = new Observer(data);
+    </script>
+  </body>
+</html>
